@@ -309,6 +309,7 @@ color: var(--green);
     max-height: unset;
     background: var(--navBackground);
     width: 100vw;
+    z-index: 1;
   }
   /* header mediaquery */
   .header{
