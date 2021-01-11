@@ -1,0 +1,331 @@
+*{
+  clear: both;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+:root{
+ --background: #222;
+    --navBackground: #262626;
+  --red: #fd1056;
+  --green: #16f0d1;
+}
+body{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+h1,h2,h3,h4,h5,h6,p,ul{
+  margin: 0;
+  padding: 0;
+}
+
+/* nav bar  */
+
+.navBar .logo{
+  position: relative;
+  height: 60px;
+  width: 60px;
+  background: #070707;
+}
+.navBar .logo img{
+  display: block;
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+}
+.navBar{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 60px;
+  padding-bottom: 20px;
+  background: var(--navBackground);
+}
+.navBar ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.navBar ul li{
+  list-style: none;
+  margin: 10px 0 ;
+  width: 100%;
+  text-align: center;
+}
+.navBar i{
+  color: #A5A5A4;
+}
+.navBar li a{
+  text-decoration: none;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  height: auto;
+  cursor: pointer;
+}
+.navLinks li a i{
+font-size: 2em;
+}
+.navLinks li{
+  position: relative;
+  cursor: pointer;
+}
+.navLinks li:nth-child(1) a::before{
+  content: 'HOME';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  font-size: .8em;
+  font-weight: 600;
+  color: var(--green);
+  opacity: 0;
+  transition: .5s;
+  z-index:3;
+}
+.navLinks li:nth-child(1):hover a::before{
+  opacity: 1;
+}
+.navLinks li:nth-child(2) a::before{
+  content: 'ABOUT';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  font-size: .8em;
+  font-weight: 600;
+  color: var(--green);
+  opacity: 0;
+  transition: .5s;
+  z-index:3;
+}
+.navLinks li:nth-child(2):hover a::before{
+  opacity: 1;
+}
+.navLinks li:nth-child(3) a::before{
+  content: 'SKILLS';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  font-size: .8em;
+  font-weight: 600;
+  color: var(--green);
+  opacity: 0;
+  transition: .5s;
+  z-index:3;
+}
+.navLinks li:nth-child(3):hover a::before{
+  opacity: 1;
+}
+.navLinks li:nth-child(4) a::before{
+  content: 'My Work';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  font-size: .8em;
+  font-weight: 600;
+  color: var(--green);
+  opacity: 0;
+  transition: .5s;
+  z-index:3;
+}
+.navLinks li:nth-child(4):hover a::before{
+  opacity: 1;
+}
+.navLinks li:nth-child(5) a::before{
+  content: 'CONTACT';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  font-size: .8em;
+  font-weight: 600;
+  color: var(--green);
+  opacity: 0;
+  transition: .5s;
+  z-index:3;
+}
+.navLinks li:nth-child(5):hover a::before{
+  opacity: 1;
+}
+.navLinks li:nth-child(1):hover a,.navLinks li:nth-child(1):hover a i {
+  color: #535353;
+}
+.navLinks li:nth-child(2):hover a,.navLinks li:nth-child(2):hover a i {
+  color: #535353;
+}
+.navLinks li:nth-child(3):hover a,.navLinks li:nth-child(3):hover a i {
+  color: #535353;
+}
+.navLinks li:nth-child(4):hover a,.navLinks li:nth-child(4):hover a i {
+  color: #535353;
+}
+.navLinks li:nth-child(5):hover a,.navLinks li:nth-child(5):hover a i {
+  color: #535353;
+}
+.social li a i{
+font-size: 1.2em;
+transition: .3s;
+}
+.social li a:hover i{
+color: var(--green);
+}
+.menu-icon{
+  display: none;
+  padding: 28px 20px;
+  position: relative; 
+  float: right;
+  cursor: pointer;
+}
+.menu-icon .nav-icon{
+  background: #333;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition:background .2s ease-out;
+}
+.menu-icon .nav-icon::before{
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 5px;
+  transition: all .2s ease-out;
+}
+.menu-icon .nav-icon::after{
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -5px;
+  transition: all .2s ease-out;
+}
+.menu-btn{
+  display: none;
+}
+.menu-btn:checked ~.menu{
+  max-height: 240px;
+}
+.menu-btn:checked ~.menu-icon .nav-icon{
+  background: transparent;
+}
+.menu-btn:checked ~.menu-icon .nav-icon::before{
+  transform: rotate(-45deg);
+  top: 0;
+}
+.menu-btn:checked ~.menu-icon .nav-icon::after{
+  transform: rotate(45deg);
+ top: 0;
+}
+
+/* header design */
+.header{
+  float: right;
+  width: calc(100vw - 60px);
+  height: 100%;
+  /* background: white; */
+  position: relative;
+}
+.title{
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translate(-2%,-50%);
+  font-size: 2em;
+  color: #fff;
+  width: fit-content;
+}
+.titleImg{
+  height: 70px;
+  width: 70px;
+}
+.title h6{
+  font-size: .5em; 
+  color: rgb(78, 77, 77);
+  text-align: right;
+}
+.tags{
+  color: #515152;
+  position: absolute;
+  bottom: 0px;
+  left: 80px;
+  font-size: 18px;
+  font-family: 'La Belle Aurore', cursive;
+  z-index: -1;
+}
+.top-tags {
+  top: 10%;
+}   
+.bottom-tags{
+  bottom: 10%;
+}
+
+@media screen and (max-width:900px){
+  /* nav bar mediaquery */
+  .navBar {
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding:0 20px;
+  }
+  .menu-icon{
+    display: unset;
+    position: absolute;
+    right: 0;
+  }
+  .navBar ul{
+    flex-direction: row;
+    display: none;
+    max-height: 0;
+  }
+  .menu-btn:checked ~ .navLinks,.menu-btn:checked ~ .social{
+    display: flex;
+    max-height: unset;
+    background: var(--navBackground);
+    width: 100vw;
+  }
+  /* header mediaquery */
+  .header{
+    float: unset;
+    width: 100%;
+    height: calc(100vh - 60px);
+  }
+  .title{
+ font-size: 4vw;
+  }
+  .titleImg{
+    height: 40px;
+    width: 40px;
+  }
+  .title h6{
+    font-size: .5em; 
+    color: rgb(78, 77, 77);
+    text-align: right;
+  }
+}
