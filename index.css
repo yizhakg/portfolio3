@@ -94,7 +94,7 @@ a{
   cursor: pointer;
 }
 .navLinks li span i{
-font-size: 1.5em;
+font-size: 1.3em;
 }
 .navLinks li{
   position: relative;
@@ -311,6 +311,81 @@ color: var(--green);
   font-size: 1em;
   color: #fff;
   font-weight: 600;
+}
+/* skills */
+.skills3D{
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translate(-50%,-3%);
+}
+.skills3D ul{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.skills3D ul li{
+  position: relative;
+  list-style: none;
+  width: 50px;
+  height: 50px;
+  margin: 0 30px;
+  transform: rotate(-30deg) skew(25deg);
+  background: #ccc;
+} 
+.skills3D ul li span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  transition: 0.5s;
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+color: #fff;
+font-size: 25px;
+box-shadow: -1px 1px 1px rgba(0,0,0,.1);
+}
+.skills3D ul li:hover span{
+  box-shadow: -1px 1px 1px rgba(0,0,0,.1);
+}
+.skills3D ul li:hover span:nth-child(5){
+transform: translate(40px, -40px);
+opacity: 1;
+}
+.skills3D ul li:hover span:nth-child(4){
+transform: translate(30px, -30px);
+opacity: .8;
+}
+.skills3D ul li:hover span:nth-child(3){
+transform: translate(20px, -20px);
+opacity: .6;
+}
+.skills3D ul li:hover span:nth-child(2){
+transform: translate(10px, -10px);
+opacity: .4;
+}
+.skills3D ul li:hover span:nth-child(1){
+transform: translate(0, 0);
+opacity: .2;
+}
+.skills3D ul li:nth-child(1) span{
+  background: #e34f26;
+}
+.skills3D ul li:nth-child(2) span{
+  background: #264de4;
+}
+.skills3D ul li:nth-child(3) span{
+  background: #f7df1e;
+}
+.skills3D ul li:nth-child(4) span{
+  background: #00d8ff;
+}
+.skills3D ul li:nth-child(5) span{
+  background: #44883e;
 }
 /* contact */
 #contact .textField{
