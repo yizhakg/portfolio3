@@ -502,7 +502,10 @@ color: white;
     height: calc(100vh - 60px);
   }
   .title{
- font-size: 4vw;
+ font-size: 5vw;
+ text-align: center;
+ left: 50%;
+ transform: translate(-50%,-50%);
   }
   .titleImg{
     height: 40px;
@@ -514,7 +517,7 @@ color: white;
     text-align: right;
   }
   .textField{
-    font-size: .9em;
+    font-size: 5vw;
     width: 80%;
     left: 50%;
     text-align: center;
@@ -535,6 +538,9 @@ color: white;
    flex-direction: column;
    width: 100%;
   }
+  #contact .textField{
+    font-size: 1em;
+ }
   .formContact textarea{
     height: 100px;
   }
