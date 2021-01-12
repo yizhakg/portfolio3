@@ -312,9 +312,31 @@ color: var(--green);
   color: #fff;
   font-weight: 600;
 }
+/* contact */
+#contact .textField{
+   font-size: .7em;
+}
+.formContact{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  grid-gap: 10px;
+}
+.formContact input:nth-child(3),.formContact textarea{
+  grid-column: 1/3;
+}
+.formContact input[type=text],.formContact input[type=email],.formContact textarea{
+  background: #262626;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+  outline: none;
+}
 /* ----------------------------- */
 
-@media screen and (max-width:900px){
+@media screen and (max-width:800px){
   /* nav bar mediaquery */
   .navBar {
     flex-direction: column;
