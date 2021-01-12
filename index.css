@@ -22,6 +22,9 @@ h1,h2,h3,h4,h5,h6,p,ul{
   margin: 0;
   padding: 0;
 }
+a{ 
+  text-decoration: none;
+}
 
 /* nav bar  */
 
@@ -49,6 +52,7 @@ h1,h2,h3,h4,h5,h6,p,ul{
   width: 60px;
   padding-bottom: 20px;
   background: var(--navBackground);
+  z-index:3;
 }
 .navBar ul{
   display: flex;
@@ -66,22 +70,21 @@ h1,h2,h3,h4,h5,h6,p,ul{
 .navBar i{
   color: #A5A5A4;
 }
-.navBar li a{
-  text-decoration: none;
-  display: inline-block;
-  width: 60px;
-  height: 60px;
+.navBar li span{
+  display: block;
+  height: 100%;
+  width: 100%;
   height: auto;
   cursor: pointer;
 }
-.navLinks li a i{
+.navLinks li span i{
 font-size: 2em;
 }
 .navLinks li{
   position: relative;
   cursor: pointer;
 }
-.navLinks li:nth-child(1) a::before{
+.navLinks li:nth-child(1) span::before{
   content: 'HOME';
   position: absolute;
   top: 50%;
@@ -95,10 +98,10 @@ font-size: 2em;
   transition: .5s;
   z-index:3;
 }
-.navLinks li:nth-child(1):hover a::before{
+.navLinks li:nth-child(1):hover span::before{
   opacity: 1;
 }
-.navLinks li:nth-child(2) a::before{
+.navLinks li:nth-child(2) span::before{
   content: 'ABOUT';
   position: absolute;
   top: 50%;
@@ -112,10 +115,10 @@ font-size: 2em;
   transition: .5s;
   z-index:3;
 }
-.navLinks li:nth-child(2):hover a::before{
+.navLinks li:nth-child(2):hover span::before{
   opacity: 1;
 }
-.navLinks li:nth-child(3) a::before{
+.navLinks li:nth-child(3) span::before{
   content: 'SKILLS';
   position: absolute;
   top: 50%;
@@ -129,10 +132,10 @@ font-size: 2em;
   transition: .5s;
   z-index:3;
 }
-.navLinks li:nth-child(3):hover a::before{
+.navLinks li:nth-child(3):hover span::before{
   opacity: 1;
 }
-.navLinks li:nth-child(4) a::before{
+.navLinks li:nth-child(4) span::before{
   content: 'My Work';
   position: absolute;
   top: 50%;
@@ -146,10 +149,10 @@ font-size: 2em;
   transition: .5s;
   z-index:3;
 }
-.navLinks li:nth-child(4):hover a::before{
+.navLinks li:nth-child(4):hover span::before{
   opacity: 1;
 }
-.navLinks li:nth-child(5) a::before{
+.navLinks li:nth-child(5) span::before{
   content: 'CONTACT';
   position: absolute;
   top: 50%;
@@ -163,29 +166,35 @@ font-size: 2em;
   transition: .5s;
   z-index:3;
 }
-.navLinks li:nth-child(5):hover a::before{
+.navLinks li:nth-child(5):hover span::before{
   opacity: 1;
 }
-.navLinks li:nth-child(1):hover a,.navLinks li:nth-child(1):hover a i {
+.navLinks li:nth-child(1):hover span,.navLinks li:nth-child(1):hover span i {
   color: #535353;
 }
-.navLinks li:nth-child(2):hover a,.navLinks li:nth-child(2):hover a i {
+.navLinks li:nth-child(2):hover span,.navLinks li:nth-child(2):hover span i {
   color: #535353;
 }
-.navLinks li:nth-child(3):hover a,.navLinks li:nth-child(3):hover a i {
+.navLinks li:nth-child(3):hover span,.navLinks li:nth-child(3):hover span i {
   color: #535353;
 }
-.navLinks li:nth-child(4):hover a,.navLinks li:nth-child(4):hover a i {
+.navLinks li:nth-child(4):hover span,.navLinks li:nth-child(4):hover span i {
   color: #535353;
 }
-.navLinks li:nth-child(5):hover a,.navLinks li:nth-child(5):hover a i {
+.navLinks li:nth-child(5):hover span,.navLinks li:nth-child(5):hover span i {
   color: #535353;
+}
+.social li a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
 }
 .social li a i{
 font-size: 1.2em;
 transition: .3s;
 }
-.social li a:hover i{
+.social li:hover a i{
 color: var(--green);
 }
 .menu-icon{
@@ -242,7 +251,7 @@ color: var(--green);
 }
 
 /* header design */
-.header{
+.container{
   float: right;
   width: calc(100vw - 60px);
   height: 100%;
@@ -309,10 +318,9 @@ color: var(--green);
     max-height: unset;
     background: var(--navBackground);
     width: 100vw;
-    z-index: 1;
   }
   /* header mediaquery */
-  .header{
+  .container{
     float: unset;
     width: 100%;
     height: calc(100vh - 60px);
