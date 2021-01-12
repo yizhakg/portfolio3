@@ -587,7 +587,7 @@ color: white;
     .openBook{
       top: 100%;
       left: 48%;
-      transform: translate(-48%,-85%) scale(.5);
+      transform: translate(-48%,-90%) scale(.5);
       z-index: -1;
       /* zoom: .5; */
   }
