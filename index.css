@@ -513,7 +513,9 @@ right: 10px;
 background: var(--green);
 color: white;
 }
-/* ----------------------------- */
+
+
+/* --------------Media Query--------------- */
 
 @media screen and (max-width:800px){
   body{
@@ -574,6 +576,19 @@ color: white;
     font-size: .5em; 
     color: rgb(78, 77, 77);
     text-align: right;
+  }
+
+  /* about mediaquery*/
+  #about .textField{
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,-5%);
+  }
+    .openBook{
+      top: 95%;
+      left: 48%;
+      transform: translate(-48%,-95%);
+      zoom: .5;
   }
   /* skills mediaquery*/
   .skills3D ul li{
