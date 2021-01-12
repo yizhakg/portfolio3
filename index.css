@@ -648,8 +648,7 @@ color: white;
   }
   /* contact mediaquery*/
   #contact{
-    justify-content: flex-end;
-    padding-bottom: 20px;
+    justify-content: center;
   }
   .formContact{
    display: flex;
