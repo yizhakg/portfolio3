@@ -347,8 +347,9 @@ main{
 }
 .title h6{
   font-size: .5em; 
-  color: rgb(78, 77, 77);
+  color: var(--green);
   text-align: right;
+  text-shadow: 2px 2px 0px var(--red);
 }
 /* about */
 #about{
