@@ -588,6 +588,7 @@ color: white;
       top: 100%;
       left: 48%;
       transform: translate(-48%,-85%) scale(.5);
+      z-index: -1;
       /* zoom: .5; */
   }
   /* skills mediaquery*/
