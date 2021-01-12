@@ -3,6 +3,8 @@
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 :root{
  --background: #222;
@@ -16,7 +18,7 @@ body{
   background: var(--background);
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 h1,h2,h3,h4,h5,h6,p,ul{
   margin: 0;
@@ -267,19 +269,42 @@ color: var(--green);
  top: 0;
 }
 /* main design */
-/* header design */
-.container{
-  float: right;
+main{
+  display: flex;
+  flex-direction: column;
   width: calc(100% - 60px);
+  align-items: flex-end;
+  margin-left: auto;
+}
+/* containers */
+.container{
+  display: flex;
   height: 100vh;
-  /* background: white; */
+  width: 100%;
   position: relative;
+  padding: 50px;
+}
+.textField{
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  width: 50%;
+}
+.textField h1{
+  font-size: 2.5em;
+  color: var(--green);
+  font-weight: 800;
+  text-shadow: 2px 1px 0px var(--red);
+}
+.textField p{
+  font-size: 1em;
+  color: #fff;
+  font-weight: 600;
+}
+/* header design */
+#header{
+  align-items: center;
 }
 .title{
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  transform: translate(-10%,-50%);
   font-size: 2em;
   color: #fff;
   width: fit-content;
@@ -293,28 +318,11 @@ color: var(--green);
   color: rgb(78, 77, 77);
   text-align: right;
 }
-/* containers */
-.textField{
-  position: absolute;
-  letter-spacing: 2px;
-  word-spacing: 5px;
-  top: 50%;
-  left: 10%;
-  transform: translate(-10%,-50%);
-  width: 40%;
-}
-.textField h1{
-  font-size: 2.5em;
-  color: var(--green);
-  font-weight: 800;
-  text-shadow: 2px 1px 0px var(--red);
-}
-.textField p{
-  font-size: 1em;
-  color: #fff;
-  font-weight: 600;
-}
 /* about */
+#about{
+  justify-content: space-between;
+  align-items: center;
+}
 .openBook{
   width: 250px;
   height: 350px;
@@ -322,23 +330,21 @@ color: var(--green);
   background-size: cover;
   background-position-x: 40px;
   background-repeat: no-repeat;
-  position: absolute;
-  top: 50%;
-  right: 5%;
-  transform: translate(-5%,-50%);
   perspective: 1000px;
   cursor: pointer;
+  /* transform: scale(.8); */
 }
 .cover{
   width: 210px;
   height: 100%;
   position: absolute;
   left: 40px;
-  background-color: #345b8c;
+  background-color: var(--navBackground);
   transform: rotateY(-0deg);
   transform-style: preserve-3d;
   transform-origin: left;
   transition: .8s ease-in;
+  box-shadow: -3px 3px 3px rgba(0,0,0,.1);
 }
 .openBook:hover .cover{
 transform: rotateY(-180deg);
@@ -365,11 +371,14 @@ figure.back{
   transform: rotateY(180deg);
 }
 /* skills */
+#skills{
+  align-items: center;
+}
 .skills3D{
   position: absolute;
-  bottom: 3%;
+  bottom: 7%;
   left: 50%;
-  transform: translate(-50%,-3%);
+  transform: translate(-50%,-7%);
 }
 .skills3D ul{
   position: relative;
@@ -440,6 +449,9 @@ opacity: .2;
   background: #44883e;
 }
 /* contact */
+#contact{
+  align-items: center;
+}
 #contact .textField p{
    font-size: .7em;
 }
@@ -456,7 +468,7 @@ opacity: .2;
   position: absolute;
   top: 3px;
   right: 3px;
-height: 90%;
+height: 93%;
 width: 100%;
 z-index: -1;
 border: 1px solid var(--green);
@@ -483,6 +495,7 @@ right: 10px;
   display: block;
   height: 30px;
   width: 70px;
+  margin-top: 5px;
   background: #262626;
   font-size: 1.3em;
   font-weight: 900;
@@ -496,6 +509,7 @@ right: 10px;
 .buttonHover:before{
   content: "";
   position: absolute;
+  background: var(--background);
   top: 3px;
   right: 3px;
 height: 100%;
@@ -519,7 +533,6 @@ color: white;
 
 @media screen and (max-width:800px){
   body{
-    margin-top: 60px;
     overflow: auto;
   }
 
@@ -549,24 +562,27 @@ color: white;
     width: 100vw;
   }
   /* containers mediaquery */
-  .container{
-    float: unset;
+  main{
     width: 100%;
-    height: calc(100vh - 60px);
+    justify-content: center;
+    text-align: center;
+  }
+  .container{
+    flex-direction: column;
+    padding: 5px;
+    padding-top: 70px;
   }
   .textField{
-    font-size: 5vw;
+    font-size: 4vw;
     width: 80%;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%,-50%);
   }
  /* header mediaquery */ 
+ #header{
+  justify-content: center;
+ }
   .title{
  font-size: 4.3vw;
  text-align: center;
- left: 50%;
- transform: translate(-50%,-50%);
   }
   .titleImg{
     height: 40px;
@@ -579,26 +595,24 @@ color: white;
   }
 
   /* about mediaquery*/
-  #about .textField{
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%,-5%);
+  #about{
+    justify-content: center;
   }
     .openBook{
-      top: 100%;
-      left: 48%;
-      transform: translate(-48%,-90%) scale(.5);
-      z-index: -1;
+      transform: scale(.5);
       /* zoom: .5; */
   }
   /* skills mediaquery*/
+    #skill{
+   justify-content: flex-start;
+    }
   .skills3D ul li{
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     margin: 15px;
   }
   .skills3D ul li span{
-    font-size: 10px;
+    font-size: 20px;
   }
   /* contact mediaquery*/
   .formContact{
