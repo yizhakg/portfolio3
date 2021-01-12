@@ -20,11 +20,11 @@
     <input class="menu-btn" type="checkbox" id="menu-btn" />
     <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
     <ul class="navLinks">
-      <li><span onclick="navToDiv()"><i class="fa fa-home" aria-hidden="true"></i></span></li>
-      <li><span onclick="navToDiv()"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span></li>
-      <li><span onclick="navToDiv()"><i class="fa fa-code" aria-hidden="true"></i></span></li>
-      <li><span onclick="navToDiv()"><i class="fa fa-code-fork" aria-hidden="true"></i></span></li>
-      <li><span onclick="navToDiv()"><i class="fa fa-envelope" aria-hidden="true"></i></span></li>
+      <li><span onclick="navToDiv('header')"><i class="fa fa-home" aria-hidden="true"></i></span></li>
+      <li><span onclick="navToDiv('about')"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span></li>
+      <li><span onclick="navToDiv('skills')"><i class="fa fa-code" aria-hidden="true"></i></span></li>
+      <li><span onclick="navToDiv('myWork')"><i class="fa fa-code-fork" aria-hidden="true"></i></span></li>
+      <li><span onclick="navToDiv('contact')"><i class="fa fa-envelope" aria-hidden="true"></i></span></li>
     </ul>
     <ul class="social">
       <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -33,13 +33,19 @@
       <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
     </ul>
   </nav>
-  <header class="container">
+  <div class="htmlBackground">
     <span class="tags top-tags">
       &lt;html&gt;<br />
       &nbsp;&nbsp; &lt;/head&gt;</br>
       &nbsp;&nbsp; &lt;/head&gt;</br>
       &nbsp;&nbsp;&nbsp; &lt;body&gt;
     </span>
+    <span class="tags bottom-tags">
+      &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br />
+      &lt;/html&gt;
+    </span>
+  </div>
+  <header id="header" class="container">
     <div class="title">
       <h1>
         Hi,</br>
@@ -48,11 +54,37 @@
       </h1>
       <h6>Front End Developer/Back End Developer</h6>
     </div>
-    <span class="tags bottom-tags">
-      &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br />
-      &lt;/html&gt;
-    </span>
   </header>
+  <div id="about" class="container">
+    <div class="textField">
+      <h1>About Me</h1>
+    </br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quaerat tenetur fugit suscipit. Ea atque dolor
+        voluptatum aspernatur iure similique placeat eligendi ut consequuntur reprehenderit, maxime consectetur quae
+        porro modi!</p>
+    </div>
+  </div>
+  <div id="skills" class="container">
+    <div class="textField">
+      <h1>Skills & Expertise</h1>
+    </br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quaerat tenetur fugit suscipit. Ea atque dolor
+        voluptatum aspernatur iure similique placeat eligendi ut consequuntur reprehenderit, maxime consectetur quae
+        porro modi!</p>
+    </div>
+  </div>
+  <div id="myWork" class="container">
+
+  </div>
+  <div id="contact" class="container">
+    <div class="textField">
+      <h1>Contact Me</h1>
+    </br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quaerat tenetur fugit suscipit. Ea atque dolor
+        voluptatum aspernatur iure similique placeat eligendi ut consequuntur reprehenderit, maxime consectetur quae
+        porro modi!</p>
+    </div>
+  </div>
   <script src="index.js"></script>
 </body>
 

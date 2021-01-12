@@ -1,4 +1,4 @@
-function scrollToDiv(id) {
+function navToDiv(id) {
  let div = document.getElementById(id);
- div.scrollIntoView()
+ div.scrollIntoView(false)
 }

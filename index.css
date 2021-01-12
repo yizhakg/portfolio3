@@ -2,6 +2,7 @@
   clear: both;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
 }
 :root{
  --background: #222;
@@ -25,7 +26,22 @@ h1,h2,h3,h4,h5,h6,p,ul{
 a{ 
   text-decoration: none;
 }
-
+.tags{
+  margin-top: 60px;
+  color: #515152;
+  position: fixed;
+  bottom: 0px;
+  left: 120px;
+  font-size: 18px;
+  font-family: 'La Belle Aurore', cursive;
+  z-index: -1;
+}
+.top-tags {
+  top: 10%;
+}   
+.bottom-tags{
+  bottom: 10%;
+}
 /* nav bar  */
 
 .navBar .logo{
@@ -78,7 +94,7 @@ a{
   cursor: pointer;
 }
 .navLinks li span i{
-font-size: 2em;
+font-size: 1.5em;
 }
 .navLinks li{
   position: relative;
@@ -191,7 +207,7 @@ font-size: 2em;
   cursor: pointer;
 }
 .social li a i{
-font-size: 1.2em;
+font-size: .9em;
 transition: .3s;
 }
 .social li:hover a i{
@@ -249,20 +265,20 @@ color: var(--green);
   transform: rotate(45deg);
  top: 0;
 }
-
+/* main design */
 /* header design */
 .container{
   float: right;
-  width: calc(100vw - 60px);
-  height: 100%;
+  width: calc(100% - 60px);
+  height: 100vh;
   /* background: white; */
   position: relative;
 }
 .title{
   position: absolute;
   top: 50%;
-  left: 2%;
-  transform: translate(-2%,-50%);
+  left: 10%;
+  transform: translate(-10%,-50%);
   font-size: 2em;
   color: #fff;
   width: fit-content;
@@ -276,26 +292,31 @@ color: var(--green);
   color: rgb(78, 77, 77);
   text-align: right;
 }
-.tags{
-  color: #515152;
+/* about */
+.textField{
   position: absolute;
-  bottom: 0px;
-  left: 80px;
-  font-size: 18px;
-  font-family: 'La Belle Aurore', cursive;
-  z-index: -1;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  top: 50%;
+  left: 10%;
+  transform: translate(-10%,-50%);
+  width: 40%;
 }
-.top-tags {
-  top: 10%;
-}   
-.bottom-tags{
-  bottom: 10%;
+.textField h1{
+  font-size: 2.5em;
+  color: var(--green);
+  font-weight: 800;
 }
+.textField p{
+  font-size: 1em;
+  color: #fff;
+  font-weight: 600;
+}
+/* ----------------------------- */
 
 @media screen and (max-width:900px){
   /* nav bar mediaquery */
   .navBar {
-    position: relative;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -320,9 +341,12 @@ color: var(--green);
     width: 100vw;
   }
   /* header mediaquery */
+  body{
+    margin-top: 60px;
+  }
   .container{
     float: unset;
-    width: 100%;
+    width: 100vw;
     height: calc(100vh - 60px);
   }
   .title{
@@ -336,5 +360,9 @@ color: var(--green);
     font-size: .5em; 
     color: rgb(78, 77, 77);
     text-align: right;
+  }
+  .textField{
+    font-size: .9em;
+    width: 60%;
   }
 }
