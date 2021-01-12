@@ -15,7 +15,8 @@
 body{
   margin: 0;
   padding: 0;
-  background: var(--background);
+  /* background: var(--background); */
+  background: radial-gradient(circle, rgba(89,89,89,1) 0%, rgba(20,20,20,1) 100%);
   width: 100%;
   height: 100vh;
   /* overflow: hidden; */
@@ -45,6 +46,37 @@ a{
 .bottom-tags{
   bottom: 10%;
 }
+.backgroundShap{
+  position: fixed;
+  bottom: 0;
+  right: 10%;
+  height: 100px;
+  width: 20%;
+  background: var(--green);
+  z-index: -1;
+  opacity: .7;
+  animation: animate 2s linear infinite;
+}
+.backgroundShap::before{
+  content: '';
+  position: fixed;
+  top: 0;
+  right: 40%;
+  height: 100px;
+  width: 20%;
+  background: var(--red);
+  z-index: -1;
+  animation: animate 2s linear infinite;
+}
+@keyframes animate{
+  0%,100%{
+    height: 100px; 
+  }
+  50%{
+    height: 300px; 
+  }
+}
+
 /* nav bar  */
 .navBar{
   display: flex;
@@ -615,6 +647,10 @@ color: white;
     font-size: 20px;
   }
   /* contact mediaquery*/
+  #contact{
+    justify-content: flex-end;
+    padding-bottom: 20px;
+  }
   .formContact{
    display: flex;
    flex-direction: column;
