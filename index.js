@@ -4,5 +4,5 @@ function navToDiv(id) {
 }
 window.onload = ()=>{
   let div = document.getElementById('header');
-  div.scrollIntoView(false);  
+  div.scrollIntoView();  
 }
