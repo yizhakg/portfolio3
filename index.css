@@ -568,7 +568,9 @@ color: white;
   body{
     overflow: auto;
   }
-
+  .backgroundShap::before{
+    right: 10%;
+  }
   /* nav bar mediaquery */
   .navBar {
     flex-direction: column;
