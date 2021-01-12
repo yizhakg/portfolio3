@@ -11,7 +11,6 @@
   --green: #16f0d1;
 }
 body{
-  position: relative;
   margin: 0;
   padding: 0;
   background: var(--background);
@@ -33,13 +32,13 @@ a{
   font-weight: 500;
   position: fixed;
   bottom: 0px;
-  left: 120px;
+  left: 20%;
   font-size: 18px;
   font-family: 'La Belle Aurore', cursive;
   z-index: -1;
 }
 .top-tags {
-  top: 10%;
+  top: 3%;
 }   
 .bottom-tags{
   bottom: 10%;
@@ -294,7 +293,7 @@ color: var(--green);
   color: rgb(78, 77, 77);
   text-align: right;
 }
-/* about */
+/* containers */
 .textField{
   position: absolute;
   letter-spacing: 2px;
@@ -308,11 +307,62 @@ color: var(--green);
   font-size: 2.5em;
   color: var(--green);
   font-weight: 800;
+  text-shadow: 2px 1px 0px var(--red);
 }
 .textField p{
   font-size: 1em;
   color: #fff;
   font-weight: 600;
+}
+/* about */
+.openBook{
+  width: 250px;
+  height: 350px;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyYMdhzuHEPl0z4a8RUnxFaIBLTwknxaqkxw&usqp=CAU");  
+  background-size: cover;
+  background-position-x: 40px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translate(-5%,-50%);
+  perspective: 1000px;
+  cursor: pointer;
+}
+.cover{
+  width: 210px;
+  height: 100%;
+  position: absolute;
+  left: 40px;
+  background-color: #345b8c;
+  transform: rotateY(-0deg);
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: .8s ease-in;
+}
+.openBook:hover .cover{
+transform: rotateY(-180deg);
+}
+figure{
+  margin: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+backface-visibility: hidden;
+}
+figure.front{
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyYMdhzuHEPl0z4a8RUnxFaIBLTwknxaqkxw&usqp=CAU");  
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+figure.back{
+  background: url("https://mattsmorton.files.wordpress.com/2015/07/i-am-legend-2007.jpg");  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotateY(180deg);
 }
 /* skills */
 .skills3D{
@@ -390,7 +440,7 @@ opacity: .2;
   background: #44883e;
 }
 /* contact */
-#contact .textField{
+#contact .textField p{
    font-size: .7em;
 }
 .formContact{
@@ -470,6 +520,7 @@ color: white;
     margin-top: 60px;
     overflow: auto;
   }
+
   /* nav bar mediaquery */
   .navBar {
     flex-direction: column;
@@ -495,14 +546,22 @@ color: white;
     background: var(--navBackground);
     width: 100vw;
   }
-  /* header mediaquery */
+  /* containers mediaquery */
   .container{
     float: unset;
     width: 100%;
     height: calc(100vh - 60px);
   }
+  .textField{
+    font-size: 5vw;
+    width: 80%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+  }
+ /* header mediaquery */ 
   .title{
- font-size: 5vw;
+ font-size: 4.3vw;
  text-align: center;
  left: 50%;
  transform: translate(-50%,-50%);
@@ -515,13 +574,6 @@ color: white;
     font-size: .5em; 
     color: rgb(78, 77, 77);
     text-align: right;
-  }
-  .textField{
-    font-size: 5vw;
-    width: 80%;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%,-50%);
   }
   /* skills mediaquery*/
   .skills3D ul li{
@@ -538,7 +590,7 @@ color: white;
    flex-direction: column;
    width: 100%;
   }
-  #contact .textField{
+  #contact .textField p{
     font-size: 1em;
  }
   .formContact textarea{
