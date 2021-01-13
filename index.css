@@ -481,6 +481,7 @@ opacity: .2;
 /* contact */
 #contact{
   align-items: center;
+  justify-content: space-evenly;
 }
 #contact .textField p{
    font-size: .7em;
@@ -556,6 +557,103 @@ right: 10px;
 .buttonHover:active {
 background: var(--green);
 color: white;
+}
+/* ------ */
+.contactInfo{
+  position: relative;
+  height: 400px;
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+  background: var(--navBackground);
+  overflow: hidden;
+}
+.contactInfo .card{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+  z-index: 0;
+}
+.contactInfo .card::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--green);
+ clip-path: circle(40% at 80% 10%);
+ transition: .5s;
+}
+.contactInfo .card:hover::before{
+  clip-path: circle(60% at 70% 5%);
+}
+.contactInfo .card::after{
+  content: 'GETE';
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%,-80%);
+  color: #35353579;
+  font-size: 100px;
+  font-weight: 900;
+  z-index: 1;
+}
+.contactInfo .imgBox{
+position: absolute;
+top: 30%;
+left: 50%;
+transform: translate(-50%,-50%);
+transition: .5s;
+}
+.contactInfo img{
+  height: 200px;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  transform: rotate(-25deg);
+}
+.contactInfo .card:hover .imgBox{
+  top: 20%;
+}
+.contactInfo h1,h1{
+  margin: 0;
+  padding: 0;
+}
+.contactInfo .text{
+  position: absolute;
+  color: white;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%,0);
+  transition: .5s;
+  z-index: 2;
+}
+.contactInfo .card:hover .text{
+  top: 40%;
+}
+.contactInfo ul{
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: .8s;
+}
+.contactInfo .card:hover ul{
+  opacity: .9;
+}
+.contactInfo ul li{
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 13px;
+  /* display: block; */
+  list-style: none;
+  transition: .3s;
+}
+.contactInfo ul li:hover{
+box-shadow: 3px 3px 1px 1px #262626;
+transform: scale(1.5);
+background-color: rgba(204, 202, 202, 0.377);
 }
 
 
@@ -649,14 +747,19 @@ color: white;
   /* contact mediaquery*/
   #contact{
     justify-content: center;
+    flex-direction: column;
+    height: unset;
   }
-  .formContact{
-   display: flex;
-   flex-direction: column;
-   width: 100%;
+  #contact .contactInfo{
+    margin: 40px;
   }
   #contact .textField p{
     font-size: 1em;
+ }
+ .formContact{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
  }
   .formContact textarea{
     height: 100px;
