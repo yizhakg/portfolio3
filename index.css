@@ -873,8 +873,12 @@ background-color: rgba(204, 202, 202, 0.377);
     height: auto;
   }
   .workContainer .workText{
-    font-size: 50%;
-    top:65%
+    font-size: 3vw;
+    text-align: center;
+    top:60%
+  }
+  .workContainer .workCard:hover .workText{
+    top: 20%;
   }
   .workContainer ul li{
     width: 90%;
