@@ -341,6 +341,7 @@ main{
 .titleImg{
   height: 70px;
   width: 70px;
+  transform: translate(-2px,4px);
 }
 .title h6{
   font-size: .5em; 
@@ -826,12 +827,12 @@ background-color: rgba(204, 202, 202, 0.377);
  text-align: center;
   }
   .titleImg{
-    height: 40px;
-    width: 40px;
+    height: 70px;
+    width: 70px;
+    transform: translate(-2px,4px);
   }
   .title h6{
     font-size: .5em; 
-    color: rgb(78, 77, 77);
     text-align: right;
   }
 
