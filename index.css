@@ -873,7 +873,11 @@ background-color: rgba(204, 202, 202, 0.377);
     height: auto;
   }
   .workContainer .workText{
-    font-size: 30%;
+    font-size: 50%;
+    top:65%
+  }
+  .workContainer ul li{
+    width: 90%;
   }
   /* contact mediaquery*/
   #contact{
