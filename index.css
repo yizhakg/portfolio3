@@ -478,6 +478,117 @@ opacity: .2;
 .skills3D ul li:nth-child(5) span{
   background: #44883e;
 }
+
+/* myWork */
+#myWork{
+  padding: 0;
+}
+.workCatalog{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100%;
+  width: 100%;
+  grid-gap: 10px;
+  padding: 20px;
+}
+.workContainer{
+height: 100%;
+width: 100%;
+background: white;
+position: relative;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+border-radius: 15px;
+background: var(--navBackground);
+overflow: hidden;
+}
+/* ----- */
+.workContainer .workCard{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+  z-index: 0;
+}
+.workContainer .workCard::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--green);
+ clip-path: circle(40% at 80% 10%);
+ transition: .5s;
+}
+.workContainer .workCard:hover::before{
+  clip-path: circle(100% at 50% 5%);
+  background: var(--red);
+}
+.workContainer .workImgBox{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+opacity: .95;
+clip-path: circle(30%);
+transition: .5s;
+}
+.workContainer img{
+  height: 200px;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  /* transform: rotate(-25deg); */
+}
+.workContainer .workCard:hover .workImgBox{
+  /* top: 35%; */
+  clip-path: circle(100%);
+}
+.workContainer h1{
+  margin: 0;
+  padding: 0;
+  text-shadow: -1px -1px 0px var(--red),1px 1px 0px var(--red);
+  font-weight: 900;
+}
+.workContainer .workText{
+  position: absolute;
+  color: var(--green);
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%,0);
+  transition: .5s;
+  z-index: 2;
+  width: 90%;
+}
+.workContainer .workCard:hover .workText{
+  top: 40%;
+}
+.workContainer ul{
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: .8s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.workContainer .workCard:hover ul{
+  opacity: .9;
+}
+.workContainer ul li{
+  padding: 8px;
+  border-radius: 5px;
+  text-shadow: -1px -1px 0px var(--red),1px 1px 0px var(--red);
+  font-size: 1em;
+  font-weight: 900;
+  width: 50%;
+  text-align: center;
+  list-style: none;
+  transition: .3s;
+}
+
+
 /* contact */
 #contact{
   align-items: center;
@@ -743,6 +854,26 @@ background-color: rgba(204, 202, 202, 0.377);
   }
   .skills3D ul li span{
     font-size: 20px;
+  }
+  /* myWork mediaquery*/
+  #myWork{
+    padding: 5px;
+    padding-top: 70px;
+  }
+  .workCatalog{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
+  }
+  .workContainer .workImgBox{
+    width: 100%;
+  }
+  .workContainer img{
+    width: 100%;
+    height: auto;
+  }
+  .workContainer .workText{
+    font-size: 30%;
   }
   /* contact mediaquery*/
   #contact{
