@@ -30,13 +30,13 @@ a{
 }
 .tags{
   margin-top: 60px;
-  color: #515152;
+  color: #989899;
   /* color: white; */
   font-weight: 500;
   position: fixed;
   bottom: 0px;
   left: 20%;
-  font-size: 18px;
+  font-size: 1.5em;
   font-family: 'La Belle Aurore', cursive;
   z-index: -1;
 }
